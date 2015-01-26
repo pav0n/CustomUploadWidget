@@ -1,3 +1,11 @@
+# -*- coding: utf-8 -*-
+__author__ = 'Juan Pavón'
+__email__ = 'pavon.gnu@gmail.com'
+__copyright__ = 'Copyright(c) 2015, Juan Pavón'
+__license__ = 'LGPLv3'
+__version__ = '1.0'
+__status__ = 'Development' 
+
 from gluon import *
 from gluon.storage import Storage
 from gluon.sqlhtml import *
@@ -20,7 +28,7 @@ class CustomUploadWidget(FormWidget):
         button = INPUT(_value='choose file',_type='button',_id=fake_id)
         inp = DIV('',button,DIV(INPUT(**attributes),_style="height:0px;overflow:hidden"))
         img_id = "%s_upload_img"%real_id
-        inp['_onchange'] = "loadFile(event,this,'%s')"%img_id
+        inp['_onchange'] = """loadFile(event,this,'%s')"""%img_id
 
         url = ''
 
