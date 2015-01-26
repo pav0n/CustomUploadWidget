@@ -12,6 +12,5 @@ USO
     sqlformargs = dict(upload=upload)
     form = SQLFORM(
                     db.table_test,
-                    showbuttontext=False,
                     **sqlformargs
                     )
