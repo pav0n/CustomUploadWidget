@@ -4,7 +4,7 @@ __email__ = 'pavon.gnu@gmail.com'
 __copyright__ = 'Copyright(c) 2015, Juan Pavón'
 __license__ = 'LGPLv3'
 __version__ = '1.0'
-__status__ = 'Development' 
+__status__ = 'Development'
 
 from gluon import *
 from gluon.storage import Storage
@@ -37,10 +37,11 @@ class CustomUploadWidget(FormWidget):
                 url = download_url(value)
             else:
                 url = download_url + '/' + value
-            (br, image) = ('', '')
+            (br, image) = (BR(), '')
             if UploadWidget.is_image(value):
-                br = BR()
                 image = IMG(_src=url, _width=DEFAULT_WIDTH, _id=img_id)
+            else:
+                image = IMG(_src='', _width=DEFAULT_WIDTH, _id=img_id)
 
             requires = attributes["requires"]
             if requires == [] or isinstance(requires, IS_EMPTY_OR):
@@ -71,7 +72,7 @@ class CustomUploadWidget(FormWidget):
                            jQuery("#%s").click(function () {
                                 jQuery("#%s").trigger('click');
                             });
-                            
+
                             var loadFile = function(event,element,img_id) {
                              var reader = new FileReader();
                              reader.onload = function(){
