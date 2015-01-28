@@ -1,11 +1,13 @@
 # CustomUploadWidget
 Este  widget customizado para el upload permite previsualizar las imagenes antes de subirlas.
 
-
-USO 
-  model 
-  from plugin_widget_upload import CustomUploadWidget
-  db.define_table('table_test', Field('imge', 'upload',widget=CustomUploadWidget.widget))
+USO :
+    
+    
+    
+    model 
+    from plugin_widget_upload import CustomUploadWidget
+    db.define_table('table_test', Field('imge', 'upload',widget=CustomUploadWidget.widget))
 
     controller
     upload = URL(c='default',r=request,f='download', args=request.args[:1])
