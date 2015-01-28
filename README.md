@@ -16,3 +16,6 @@ USO :
                     db.table_test,
                     **sqlformargs
                     )
+
+
+Despues ire depurando el javascritp que agregue en el widget solo es una prueba temporal.
