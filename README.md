@@ -15,3 +15,6 @@ USO :
                     db.table_test,
                     upload=upload
                     )
+
+
+Despues ire depurando el javascritp que agregue en el widget solo es una prueba temporal.
