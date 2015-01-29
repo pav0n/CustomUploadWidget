@@ -11,8 +11,7 @@ USO :
 
     controller
     upload = URL(c='default',r=request,f='download', args=request.args[:1])
-    sqlformargs = dict(upload=upload)
     form = SQLFORM(
                     db.table_test,
-                    **sqlformargs
+                    upload=upload
                     )
